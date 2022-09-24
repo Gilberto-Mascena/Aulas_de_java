@@ -2,17 +2,19 @@
     // (protected)= está entre private e public, desse modo só as classes filhas da classe mãe tem acesso.
 
     // Classes mãe também são chamadas de Super classe, e Classe Base.
+
+    // Não pode mais instanciar ou criar objeto dessa classe pois é abstrata = "abstract".
     
-public class Funcionario {
+public abstract class  Funcionario {
 
     private String nome;
     private String cpf;
     private double salario;
 
-
-    public double getBonificacao() {
-        return this.salario * 0.05;
-    }
+    // Metodo sem corpo, não há implementação, "abstract".
+    public abstract double getBonificacao(); 
+        
+    
 
     public String getNome() {
         return nome;

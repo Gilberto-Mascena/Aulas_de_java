@@ -1,5 +1,8 @@
 public class TestaGerente {
     public static void main(String[] args) {
+
+        Autenticavel referencia = new Gerente();
+
         Gerente g1 = new Gerente();
         g1.setNome("Marcos");
         g1.setCpf("4443332221-11");
@@ -10,7 +13,6 @@ public class TestaGerente {
         System.out.println(g1.getSalario());
        
         g1.setSenha(2222);
-
         boolean autenticou = g1.autentica(2222);
 
         System.out.println(autenticou);
