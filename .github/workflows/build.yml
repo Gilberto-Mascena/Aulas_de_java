@@ -14,7 +14,7 @@ jobs:
   
         - name: Build project 
           run: |
-            zip -q -r aulas-java-alura.zip ./aulas-java-alura
+            zip -q -r java-alura.zip ./java-alura
             ls -l *.zip
   
         - name: Create Release
@@ -36,6 +36,6 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           with:
             upload_url: ${{ steps.create_release.outputs.upload_url }}  
-            asset_path: ./aulas-java-alura.zip
-            asset_name: aulas-java-alura.zip
+            asset_path: ./java-alura.zip
+            asset_name: java-alura.zip
             asset_content_type: application/zip
